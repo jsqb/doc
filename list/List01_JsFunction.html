@@ -1,0 +1,18 @@
+<script src="../jsqb.js"></script>
+<script>
+function f(x) {
+    return x == 0 ? 1 : 0;
+}
+
+window.onload = function() {
+
+	var bits = [0, 0, 1];
+
+	bits[0] += f(bits[1]);
+	bits[0] += f(bits[2]);
+	bits[0] %= 2;
+
+	debug("result = "+bits[0]);
+
+};
+</script>

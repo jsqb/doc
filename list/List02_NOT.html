@@ -1,0 +1,13 @@
+<script src="../jsqb.js"></script>
+<script>
+window.onload = function() {
+
+	var X = [[0, 1],
+	         [1, 0]];
+
+	debug("X |0> = " + jsqb('|0>').operateMatrix(0, X));
+
+	debug("X |1> = " + jsqb('|1>').operateMatrix(0, X));
+
+};
+</script>

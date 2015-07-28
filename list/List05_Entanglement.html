@@ -1,0 +1,16 @@
+<script src="../jsqb.js"></script>
+<script>
+window.onload = function() {
+
+	var qubit  = jsqb('|00> + |11>');
+	var value1 = qubit.measure(1).value;
+	var value0 = qubit.measure(0).value;
+	debug("|00> + |11> measure => ("+value1+", "+value0+")");
+
+	var qubit  = jsqb('|01> + |10>');
+	var value1 = qubit.measure(1).value;
+	var value0 = qubit.measure(0).value;
+	debug("|01> + |10> measure => ("+value1+", "+value0+")");
+
+};
+</script>

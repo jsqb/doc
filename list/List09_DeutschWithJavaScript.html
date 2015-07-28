@@ -1,0 +1,21 @@
+<script src="../jsqb.js"></script>
+<script>
+function f0(x) { return 0; }; // Constant 0
+function f1(x) { return 1; }; // Constant 1
+function f2(x) { return x; }; // ID (balanced)
+function f3(x) { return (x + 1) % 2; }; // NOT (balanced)
+
+function deutsch(f) {
+	return (f(0) + f(1)) % 2;
+}
+
+window.onload = function() {
+
+	debug("0:constant, 1:balanced");
+	debug("deutsch(f0) = " + deutsch(f0));
+	debug("deutsch(f1) = " + deutsch(f1));
+	debug("deutsch(f2) = " + deutsch(f2));
+	debug("deutsch(f3) = " + deutsch(f3));
+
+};
+</script>

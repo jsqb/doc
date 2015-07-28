@@ -1,0 +1,25 @@
+<script src="../jsqb.js"></script>
+<script>
+function f0(x) { return 0; }; // Constant 0
+function f1(x) { return 1; }; // Constant 1
+function f2(x) { return x; }; // ID (balanced)
+function f3(x) { return (x + 1) % 2; }; // NOT (balanced)
+
+window.onload = function() {
+
+	var qubit = jsqb('|01>');
+	debug("Step 1: |01> = " + qubit);
+
+	qubit.hadamard();
+	debug("Step 2: H|01> = " + qubit);
+
+	qubit.operate(1, 0, f3);
+	debug("Step 3: Uf(H|01>) = " + qubit);
+
+	qubit.hadamard();
+	debug("Step 4: H(Uf(H|01>)) = " + qubit);
+
+	debug("Step 5: Mesure qubit-#1 = " + qubit.measure(1));
+
+};
+</script>

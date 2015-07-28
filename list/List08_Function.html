@@ -1,0 +1,14 @@
+<script src="../jsqb.js"></script>
+<script>
+function f(x) { return x; }
+
+window.onload = function() {
+
+	debug("Uf |10> = " + jsqb('|10>').operate(1, 0, f));
+	debug("Uf |11> = " + jsqb('|11>').operate(1, 0, f));
+
+	debug("Uf |1000> = " + jsqb('|1000>').operate([2,3], [0,1], f));
+	debug("Uf |1101> = " + jsqb('|1101>').operate([2,3], [0,1], f));
+
+};
+</script>

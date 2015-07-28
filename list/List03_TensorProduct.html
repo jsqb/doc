@@ -1,0 +1,11 @@
+<script src="../jsqb.js"></script>
+<script>
+window.onload = function() {
+
+	debug("|0> (x) |1> = " + jsqb('|0>').tensor(jsqb('|1>')));
+
+	var qubit = jsqb('|0>+|1>');
+	debug(qubit+" (x) "+qubit+" = " + qubit.tensor(qubit));
+
+};
+</script>

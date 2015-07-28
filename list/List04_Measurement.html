@@ -1,0 +1,17 @@
+<script src="../jsqb.js"></script>
+<script>
+window.onload = function() {
+
+	debug("|0> measure(0) = " + jsqb('|0>').measure(0));
+	debug("|100> measure(2) = " + jsqb('|100>').measure(2));
+
+	var qubit  = jsqb('|0> + |1>');
+	var qubit2 = qubit.clone();
+
+	debug(qubit+" measure(0) = " + qubit.measure(0));
+	debug(qubit+" measure(0) = " + qubit.measure(0));
+	debug(qubit+" measure(0) = " + qubit.measure(0));
+	debug(qubit2+" measure(0) = " + qubit2.measure(0));
+
+};
+</script>
